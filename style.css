@@ -20,13 +20,110 @@ body {
 }
 
 body::-webkit-scrollbar {
-    background-color: #00A0EB;
+    background-color: #23272A;
     width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
     border-radius: 40px;
     background: linear-gradient(to right, black, #FFC800);
+}
+
+/*************************nav mobile ********************/
+
+.nav_mobile {
+    height: 100vmax;
+    width: 19rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    color: white;
+    background-color: #23272A;
+    transition: all .5s;
+    transition-delay: .1s;
+    transform: translate(105%);
+    opacity: 0;
+}
+
+.nav_mobile>i {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.nav_mobile>i:hover {
+    animation-name: rotate;
+    animation-duration: 1s;
+}
+
+.nav_mobile>img {
+    padding: 3rem 0 6rem 1.5rem;
+}
+
+.nav_mobile .links {
+    width: 100%;
+}
+
+.nav_mobile .links a {
+    height: 3rem;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.841);
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.126);
+    position: relative;
+}
+
+.nav_mobile .links a span {
+    display: block;
+    height: 80%;
+    width: 2.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #393D40;
+}
+
+.nav_mobile .contact_info {
+    margin-top: 7rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav_mobile .contact_info>p {
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.604);
+}
+
+.nav_mobile .contact_info .icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.854);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 /*************************top nav**********************/
@@ -135,6 +232,7 @@ body::-webkit-scrollbar-thumb {
     gap: 11vmax;
     color: black;
     background-color: white;
+    user-select: none;
 }
 
 .main_nav .details {
@@ -155,6 +253,7 @@ body::-webkit-scrollbar-thumb {
     color: rgba(0, 0, 0, .6);
     display: none;
     font-size: 30px;
+    cursor: pointer;
 }
 
 @media (max-width:1100px) {
@@ -667,7 +766,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width:1280px) {
-    .projects .experience{
+    .projects .experience {
         width: 100%;
         transform: translate(0%);
     }
@@ -714,7 +813,7 @@ body::-webkit-scrollbar-thumb {
         grid-column: span 1;
     }
 
-    .projects .experience .gridBox{
+    .projects .experience .gridBox {
         grid-template-columns: 1fr;
     }
 }
@@ -1083,7 +1182,7 @@ body::-webkit-scrollbar-thumb {
         gap: 1vmax;
     }
 
-    .teamMembers .wrapper .text>p{
+    .teamMembers .wrapper .text>p {
         width: 100%;
     }
 

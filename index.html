@@ -16,6 +16,35 @@
 
 <body>
 
+    <nav class="nav_mobile">
+        <i class="ri-close-line"></i>
+        <img src="https://designarc.biz/demos/cleanex/assets/images/footer-logo.png" alt="">
+        <div class="links">
+            <a href="">HOME <span>▼</span></a>
+            <a href="">ABOUT US <span>▼</span></a>
+            <a href="">SERVICES <span>▼</span></a>
+            <a href="">PROJECTS <span>▼</span></a>
+            <a href="">BLOG <span>▼</span></a>
+            <a href="">PAGES <span>▼</span></a>
+            <a href="">CONTACT US <span>▼</span></a>
+        </div>
+        <div class="contact_info">
+            <h4>Contact Info</h4>
+            <p>
+                Chicago 12, Melborne City, USA <br>
+                +88 01682648101 <br>
+                info@example.com
+            </p>
+            <div class="icons">
+                <i class="ri-instagram-line"></i>
+                <i class="ri-instagram-line"></i>
+                <i class="ri-instagram-line"></i>
+                <i class="ri-instagram-line"></i>
+                <i class="ri-instagram-line"></i>
+            </div>
+        </div>
+    </nav>
+
     <nav class="top_nav">
         <img src="https://public-assets.envato-static.com/assets/logos/envato_market-dde916a48af7413e54aa058fe7ae6856752fca799da4bec355f00aea904bfa19.svg"
             alt="" />
@@ -59,7 +88,7 @@
             <i class="ri-customer-service-2-fill"></i>
             <i class="ri-customer-service-2-fill"></i>
         </div>
-        <i class="ri-menu-2-line"></i>
+        <i class="open ri-menu-2-line"></i>
     </nav>
 
     <div class="landingPage">
@@ -68,7 +97,7 @@
             <div>Best Cleaning for your better lifestyle</div>
             <div>
                 Call for book appointment today and click here to learn more about
-                    our professional team
+                our professional team
             </div>
             <div class="buttons">
                 <button>GET APPOINTMENT</button>
@@ -788,8 +817,9 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- Initialize Swiper + own javascript -->
     <script>
+
         var swiper = new Swiper(".mySwiper", {
             effect: "coverflow",
             grabCursor: true,
@@ -807,7 +837,21 @@
                 el: ".swiper-pagination",
             },
         });
+
+        let nav_mobile = document.querySelector('.nav_mobile')
+        let close = document.querySelector('.nav_mobile i');
+        let open = document.querySelector('.main_nav .open')
+        close.addEventListener("click", function () {
+            nav_mobile.style.transform = "translate(100%)";
+            nav_mobile.style.opacity = 0;
+        })
+        open.addEventListener("click", function () {
+            nav_mobile.style.transform = "translate(0)";
+            nav_mobile.style.opacity = 1;
+        })
+
     </script>
+
 </body>
 
 </html>
