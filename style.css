@@ -904,6 +904,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .teamMembers .wrapper .text {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1080,7 +1081,10 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         align-items: flex-start;
         gap: 1vmax;
+    }
 
+    .teamMembers .wrapper .text>p{
+        width: 100%;
     }
 
     .teamMembers .wrapper .images {
