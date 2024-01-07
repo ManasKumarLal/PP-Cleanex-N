@@ -10,6 +10,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -239,14 +240,14 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2vmax;
+    gap: 1.5vmax;
 }
 
 .main_nav .details a {
     text-decoration: none;
     color: rgba(0, 0, 0, .7);
     font-weight: 600;
-    width: 80px;
+    text-wrap: nowrap;
 }
 
 .main_nav i {
@@ -276,7 +277,7 @@ body::-webkit-scrollbar-thumb {
 .landingPage {
     width: 100%;
     display: flex;
-    padding: 20vh 0 25vh 0;
+    padding: 20vh 0 28vh 0;
     flex-direction: column;
     background-image: url(https://designarc.biz/demos/cleanex/assets/images/shape/shape-48.png);
     background-size: cover;
